@@ -4,7 +4,7 @@ import "./index.css";
 export default function index() {
   return (
     <header>
-      <h2>Kelompok xx</h2>
+      <h2>Kelompok 05</h2>
       <p>Modul 6 - PWA 2</p>
     </header>
   );
