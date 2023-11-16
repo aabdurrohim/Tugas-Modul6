@@ -25,10 +25,7 @@ export default function LandingPage() {
           params: { q: query },
           headers: {
             "x-rapidapi-host": "imdb8.p.rapidapi.com",
-            // "X-RapidAPI-Key": "4c3cbd32msh1801ec698f19a2dp1c5142jsnb36802bb958271",
-            "X-RapidAPI-Key": "4c713cbd32msh1801ec698f19a2dp1c5142jsnb36802bb9582",
-            //jika tidak bisa, kemungkinan sudah limit ley nya, gunakan key dibawah ini
-            //'X-RapidAPI-Key': 'ca57545f8fmsh21e867c20ea491dp172cb1jsn6c6de286e525',
+            "X-RapidAPI-Key": "ca57545f8fmsh21e867c20ea491dp172cb1jsn6c6de286e525",
           },
         });
         if (response.status === 200) {
