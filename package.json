@@ -1,5 +1,10 @@
 {
-  "name": "modul6-kel05-pwa2",
+  "name": "modul6-kel29-pwa2",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Praktikum PPB PWA 2",
+  "author": "Asisten PPB PWA 2 ",
+  "license": "UNLICENSED",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Pages
 import LandingPage from "./pages/LandingPages";
-
+import Detail from "./pages/Detail";
 import Profile from "./pages/Profile";
 // Components
 import Header from "./components/header";
@@ -20,7 +20,9 @@ function App() {
         <Header />
         <Routes>
           <Route exact path="/" element={<LandingPage />} />
+          <Route exact path="/movie" element={<LandingPage />} />
           <Route exact path="/profile" element={<Profile />} />
+          <Route exact path="/detail/:id" element={<Detail />} />
         </Routes>
         <footer>
           <NavLink to="/" className="iconWrapper">

@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 // Components
 import Card from "../components/card";
 import Modal from "../components/modal";
+// import Detail from "./Detail";
 
 export default function LandingPage() {
   const [data, setData] = useState(null);
@@ -23,7 +25,8 @@ export default function LandingPage() {
           params: { q: query },
           headers: {
             "x-rapidapi-host": "imdb8.p.rapidapi.com",
-            "X-RapidAPI-Key": "4c713cbd32msh1801ec698f19a2dp1c5142jsnb36802bb9582",
+            // "X-RapidAPI-Key": "4c3cbd32msh1801ec698f19a2dp1c5142jsnb36802bb958271",
+            "X-RapidAPI-Key": "ca57545f8fmsh21e867c20ea491dp172cb1jsn6c6de286e525",
           },
         });
         if (response.status === 200) {
@@ -55,12 +58,14 @@ export default function LandingPage() {
       <input type="text" placeholder="Search film by name" onKeyDown={(e) => onSearch(e)} />
       <h3 className="title">Search : {query}</h3>
       {!data || isLoading ? (
-        <p>Loading...</p>
+        <p>Loading...., Jika Loading lama, ganti key API nya</p>
       ) : (
         <div className="card-container">
-          {data.d.map((item, index) => {
-            return <Card data={item} key={index} onClick={() => handleClick(item)} />;
-          })}
+          {data.d.map((item, index) => (
+            <Link to={`/detail/${item.id}`} key={index} className="card-link">
+              <Card data={item} onClick={() => setModalShow(true)} />
+            </Link>
+          ))}
         </div>
       )}
       <Modal data={modalItem} isShow={modalShow} onCancel={() => setModalShow(false)} />

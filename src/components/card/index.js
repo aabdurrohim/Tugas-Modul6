@@ -5,7 +5,7 @@ export default function index({ data, onClick }) {
     return null;
   }
   return (
-    <div className="card-detail" onClick={onClick}>
+    <div className="cardDetail" onClick={onClick}>
       {data ? (
         <>
           <figure>
